@@ -1,0 +1,33 @@
+{
+    "repositories":[
+        {
+            "type":"git",
+            "url":"http://github.com/pqr/superlogger"
+        },
+
+        {
+            "type":"package",
+            "package":{
+                "name":"pqr/superlib",
+                "version":"1.2.3",
+                "source":{
+                    "type":"git",
+                    "url":"http://github.com/pqr/superlib",
+                    "reference":"master"
+                },
+                "autoload":{
+                    "classmap":["timer.php"],
+                    "files":["lib_functions.php"]
+                }
+            }
+        }
+    ],
+
+    "require":{
+        "php":">=5.3.0",
+        "silex/silex":"dev-master",
+        "twig/twig":">=1.8,<2.0-dev",
+        "mycompany/superlogger":"dev-master",
+        "pqr/superlib":"1.2.3"
+    }
+}
