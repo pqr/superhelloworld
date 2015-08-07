@@ -7,9 +7,9 @@ $app = new Silex\Application();
 $app['debug'] = true;
 
 //И шаблонизатор Twig, который легко интегрируется в Silex
-$app->register(new Silex\Provider\TwigServiceProvider(), [
-    'twig.path' => [__DIR__ . '/../views']
-]);
+$app->register(new Silex\Provider\TwigServiceProvider(), array(
+    'twig.path' => __DIR__ . '/../views'
+));
 
 //При заходе в корень нашего сайта, сработает контроллер описанный в анонимной функции ниже
 $app->get('/', function() use ($app) {
@@ -22,11 +22,11 @@ $app->get('/', function() use ($app) {
     //Благодаря сгенерированному autoloader.php нужный файл библиотеки подключится автоматически
     $ip = get_ip();
 
-    $templateVars = [
+    $templateVars = array(
         'msg' => 'Super Hello World',
         'time' => $timer->getCurrentTime(),
         'ip' => $ip
-    ];
+    );
 
     //Рендрим шаблон и выводим его в браузер пользователя
     return $app['twig']->render('layout.twig', $templateVars);
