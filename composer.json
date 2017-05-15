@@ -2,7 +2,7 @@
     "repositories":[
         {
             "type":"git",
-            "url":"http://github.com/pqr/superlogger"
+            "url":"https://github.com/pqr/superlogger"
         },
 
         {
@@ -12,7 +12,7 @@
                 "version":"1.2.3",
                 "source":{
                     "type":"git",
-                    "url":"http://github.com/pqr/superlib",
+                    "url":"https://github.com/pqr/superlib",
                     "reference":"master"
                 },
                 "autoload":{
